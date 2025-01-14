@@ -1,5 +1,5 @@
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace AdoNetCore
 {
@@ -14,7 +14,7 @@ namespace AdoNetCore
         {
             InitializeComponent();
 
-            this.connectionString = @"Data Source=LOCALHOST\DESARROLLO;Initial Catalog=HOSPITAL;Persist Security Info=True;User ID=SA";
+            this.connectionString = @"Data Source=LOCALHOST\DESARROLLO;Initial Catalog=HOSPITAL;Persist Security Info=True;User ID=SA;Trust Server Certificate=True";
             this.cn = new SqlConnection(this.connectionString);
             this.com = new SqlCommand();
             this.cn.StateChange += Cn_StateChange;
